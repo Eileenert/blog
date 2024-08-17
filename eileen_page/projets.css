@@ -1,10 +1,5 @@
-html {
-	-webkit-print-color-adjust: exact;
-}
-
 * {
 	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
 }
 
 html,
@@ -26,9 +21,7 @@ a:hover {
 	color: #646464;
 }
 
-h1,
-h2,
-h3 {
+h1, h3 {
 	letter-spacing: -0.01em;
 	line-height: 1.2;
 	font-weight: 600;
@@ -47,13 +40,8 @@ h1 {
 	margin-top: 1.875rem;
 }
 
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
 h3 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	margin-top: 1.25rem;
 	margin-bottom: 0.5em;
 	background-color: #4A3228;
@@ -94,10 +82,7 @@ img {
 
 .column {
 	padding: 0 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
+	width:50%;
 }
 
 .page-cover-image {
@@ -127,6 +112,7 @@ img {
 }
 
 p {
+	
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 
@@ -205,31 +191,41 @@ img.icon {
 
 
 
-@media (max-width:700px) {
-	div {
+
+@media (max-width: 1000px) {
+	/* Styles communs pour les écrans de 1000px ou moins */
+	div, .page-title, .column-list {
 		text-align: center;
 	}
-
-	.page-title {
-		text-align: center;
-	}
-
-	.column{
+	.column {
 		margin-left: auto;
 		margin-right: auto;
+		width: 80%;
 	}
+
 	.column-list {
-		
-		text-align: center;
 		display: block;
 		justify-content: space-between;
 	}
-
 }
 
-@media (max-width:1000px) {
-
+@media (min-width: 800px) and (max-width: 1000px) {
+	/* Styles spécifiques pour les écrans entre 800px et 1000px */
+	.column {
+		font-size: 1.75em;
+	}
+	.icon {
+		max-width: 1.5em;
+		max-height: 1.5em;
+	}
 	p {
-		max-width: 90%;
+		font-size: small;
+	}
+}
+
+@media (max-width: 800px) {
+	/* Styles spécifiques pour les écrans de 800px ou moins */
+	p {
+		max-width: 80%;
 	}
 }
