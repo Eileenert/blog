@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eileen's page</title>
@@ -12,10 +12,10 @@
 
 <body>
 
-    <article class="page sans">
+    <article class="sans">
         <header>
             <img class="page-cover-image" src="eileen_page/images/girl_whale.png" alt="Cover image">
-            <div class="page-header-icon page-header-icon-with-cover"><span class="icon">🐋</span></div>
+            <div class="page-header-icon"><span class="icon">🐋</span></div>
             <h1 class="page-title">Eileen's page</h1>
             <figure class="block-color-gray_background">
                 <div><span class="icon">🌊</span> My little page to feel motivated<strong> ^-^</strong></div>
@@ -78,6 +78,8 @@
                         <li>Puparia (short animation)</li>
                     </ul>
                     <hr />
+                    <p>number of views:</p>
+                    <div id="visitor-counter">0</div>
                 </div>
             </div>
         </div>
@@ -85,3 +87,14 @@
 </body>
 
 </html>
+<script>
+    let counter = localStorage.getItem('page_view');
+
+    if (counter === null) {
+        counter = 0;
+    }
+    counter++;
+    localStorage.setItem('page_view', counter);
+
+    document.getElementById('visitor-counter').innerText = counter;
+</script>

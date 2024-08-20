@@ -1,9 +1,5 @@
-html {
-    -webkit-print-color-adjust: exact;
-}
 * {
     box-sizing: border-box;
-    -webkit-print-color-adjust: exact;
 }
 
 body {
@@ -11,18 +7,10 @@ body {
     color: #D4D4D4;
     line-height: 1.4em;
 
-    
-}
-@media only screen {
-    body {
-        margin: 1em  auto;
-        max-width: 1000px;
 
-    }   
 }
 
-
-a{
+a {
     color: inherit;
     text-decoration: underline;
 }
@@ -31,36 +19,37 @@ a:hover {
     color: #646464;
 }
 
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.sans {
+    font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
 
-h1, h2, h3 {
+h1,
+h3 {
     letter-spacing: -0.01em;
     line-height: 1.2;
     font-weight: 600;
-    margin-bottom: 0;
 }
+
 .page-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-top: 1em;
     margin-bottom: 0.75em;
 }
+
 h1 {
     font-size: 1.875rem;
     margin-top: 1.875rem;
 }
-h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-}
+
 h3 {
     font-size: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 0.5em;
-    white-space:pre;
+    white-space: pre;
     background-color: #143A4E;
     height: 3%;
- 
+
 }
 
 figure {
@@ -71,41 +60,37 @@ figure {
 .indented {
     padding-left: 1.5em;
 }
+
 hr {
-    border:none;
-    border-top: 1px solid #373737;; 
-    width: 100%; 
+    border: none;
+    border-top: 1px solid #373737;
+    ;
+    width: 100%;
 }
+
 img {
     max-width: 100%;
-}
-@media only print {
-    img {
-        max-height: 100vh;
-        object-fit: contain;
-    }
-    
-}
-@page {
-    margin: 1in;
-    
 }
 
 .column-list {
     display: flex;
     justify-content: space-between;
 }
+
 .column {
     padding: 0 1em;
     flex: 1 1 0;
 
 }
+
 .column:first-child {
     padding-left: 0;
-    flex-grow: 3;  /* This will make the first and last divs larger */
+    flex-grow: 3;
+    /* This will make the first and last divs larger */
     flex-basis: 0;
     flex: 1 1 0;
 }
+
 .column:last-child {
     padding-right: 0;
     flex: 1 1 0;
@@ -120,16 +105,15 @@ img {
     vertical-align: text-bottom;
     margin-right: 0.5em;
 }
-img.icon {
-    border-radius: 3px;
-}
+
+
 
 .block-color-gray_background {
-	background: #252525;
-    height :4em;
+    background: #252525;
+    height: 4em;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .page-cover-image {
@@ -139,31 +123,27 @@ img.icon {
     overflow: hidden;
     object-position: 0% 10%;
 }
+
 .page-header-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
-}
-.page-header-icon-with-cover {
     margin-top: -0.8em;
     margin-left: 0.07em;
 }
-.page-header-icon img {
-    border-radius: 3px;
-}
+
+
 .link-to-page {
     margin: 1em 0;
     padding: 0;
     border: none;
     font-weight: 500;
 }
-p > .user {
-    opacity: 0.5;
-}
 
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+
 .image {
     border: none;
     margin: 1.5em 0;
@@ -172,29 +152,39 @@ p {
     text-align: center;
 }
 
-.bulleted-list{
+.bulleted-list {
     white-space: pre-line;
 }
 
-@media (max-width:700px){
-    div{
+@media (max-width:700px) {
+
+    body {
+        margin: 1em auto;
+        max-width: 1000px;
+
+    }
+
+    div {
         text-align: center;
     }
-    ul{
+
+    ul {
         display: inline-block;
         text-align: left;
     }
 
     .column-list {
         display: block;
-        
+
     }
+
     .image {
         margin: auto;
         max-width: 80%
-        
     }
-    h3, .link-to-page{
+
+    h3,
+    .link-to-page {
         text-align: center;
     }
 
@@ -203,7 +193,7 @@ p {
     }
 
     hr {
-        border:none;
+        border: none;
     }
 
 }
