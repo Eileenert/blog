@@ -2,13 +2,15 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    background-color: #191919;
-    color: #D4D4D4;
-    line-height: 1.4em;
-
-
+	background-color: #191919;
+	color: #D4D4D4;
+	margin: 2em auto;
+	max-width: 900px;
+	line-height: 1.4;
 }
+
 
 a {
     color: inherit;
@@ -64,7 +66,6 @@ figure {
 hr {
     border: none;
     border-top: 1px solid #373737;
-    ;
     width: 100%;
 }
 
@@ -86,7 +87,6 @@ img {
 .column:first-child {
     padding-left: 0;
     flex-grow: 3;
-    /* This will make the first and last divs larger */
     flex-basis: 0;
     flex: 1 1 0;
 }
@@ -152,7 +152,7 @@ p {
     text-align: center;
 }
 
-.bulleted-list {
+ul {
     white-space: pre-line;
 }
 

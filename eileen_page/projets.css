@@ -53,16 +53,8 @@ h3 {
 }
 
 
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
 figure {
 	margin: 1.25em 0;
-	page-break-inside: avoid;
 }
 
 figcaption {
@@ -96,9 +88,6 @@ img {
 .page-header-icon {
 	font-size: 3rem;
 	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
 	margin-top: -0.72em;
 	margin-left: 0.07em;
 }
@@ -112,10 +101,8 @@ img {
 }
 
 p {
-	
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-
 	text-align: justify;
 	margin: 0 auto;
 	max-width: 100%;
@@ -129,11 +116,11 @@ p {
 	vertical-align: text-bottom;
 }
 
-img.icon {
-	border-radius: 3px;
-}
-
 .bookmark {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
 	text-decoration: none;
 	max-height: 8em;
 	padding: 0;
@@ -186,9 +173,8 @@ img.icon {
 }
 
 .sans {
-	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
-
 
 
 

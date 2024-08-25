@@ -240,3 +240,12 @@ p {
     align-items: center;
     padding: 0.2em;
 }
+
+@media (max-width: 1000px) {
+	/* Styles communs pour les écrans de 1000px ou moins */
+	div,.page-title{
+		text-align: center;
+	}
+
+}
+
