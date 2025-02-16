@@ -21,8 +21,8 @@ a:hover {
 	color: #646464;
 }
 
-#motivation{
-	font-size: 1rem;
+p#motivation{
+	font-size: 1.5em;
 }
 
 h1, h3 {
@@ -192,7 +192,7 @@ p {
 		margin-right: auto;
 		width: 80%;
 	}
-
+	
 	.column-list {
 		display: block;
 		justify-content: space-between;
