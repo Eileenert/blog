@@ -21,6 +21,10 @@ a:hover {
 	color: #646464;
 }
 
+#motivation{
+	font-size: 0.9rem;
+}
+
 h1, h3 {
 	letter-spacing: -0.01em;
 	line-height: 1.2;
