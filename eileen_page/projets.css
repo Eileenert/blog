@@ -71,6 +71,12 @@ img {
 	max-width: 100%;
 }
 
+/* Enlever les cadres des GIFs */
+img[src*=".gif"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
 .column-list {
 	display: flex;
 	justify-content: space-between;

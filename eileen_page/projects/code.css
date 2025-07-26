@@ -102,6 +102,12 @@ img {
 	max-width: 100%;
 }
 
+/* Enlever les cadres des GIFs */
+img[src*=".gif"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
 @media only print {
 	img {
 		max-height: 100vh;
