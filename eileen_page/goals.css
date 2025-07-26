@@ -233,24 +233,6 @@ button:focus {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(212, 212, 212, 0.2);
 }
 
-@media (max-width: 768px) {
-    button {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 15px;
-        padding: 14px 24px;
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    button {
-        padding: 12px 20px;
-        font-size: 16px;
-        border-radius: 20px;
-    }
-}
-
 
 @media (max-width: 1000px) {
 	/* Styles communs pour les écrans de 1000px ou moins */
@@ -258,5 +240,12 @@ button:focus {
 		text-align: center;
 	}
 
+    button {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+        padding: 14px 24px;
+        font-size: 18px;
+    }
 }
 

@@ -180,25 +180,6 @@ p {
     font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-
-
-@media (max-width: 1000px) {
-	/* Styles communs pour les écrans de 1000px ou moins */
-	div, .page-title, .column-list {
-		text-align: center;
-	}
-	.column {
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
-	}
-	
-	.column-list {
-		display: block;
-		justify-content: space-between;
-	}
-}
-
 /* Styles pour le bouton Go Back */
 button {
     background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
@@ -263,21 +244,30 @@ button:focus {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(212, 212, 212, 0.2);
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 1000px) {
+	/* Styles communs pour les écrans de 1000px ou moins */
+	div, .page-title, .column-list {
+		text-align: center;
+	}
+	.column {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+	
+	.column-list {
+		display: block;
+		justify-content: space-between;
+	}
+
     button {
         width: 100%;
         justify-content: center;
         margin-bottom: 15px;
         padding: 14px 24px;
         font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    button {
-        padding: 12px 20px;
-        font-size: 16px;
-        border-radius: 20px;
     }
 }
 
