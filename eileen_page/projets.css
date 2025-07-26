@@ -21,9 +21,7 @@ a:hover {
 	color: #646464;
 }
 
-p#motivation{
-	font-size: 1.5em;
-}
+
 
 h1, h3 {
 	letter-spacing: -0.01em;
@@ -116,6 +114,8 @@ p {
 	text-align: justify;
 	margin: 0 auto;
 	max-width: 100%;
+	font-size: 1.4rem;
+	line-height: 1.5;
 }
 
 .icon {
@@ -275,22 +275,85 @@ button:focus {
         padding: 14px 24px;
         font-size: 18px;
     }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
 	/* Styles spécifiques pour les écrans entre 800px et 1000px */
 	.column {
-		font-size: 1.75em;
+		font-size: 1.2em;
 	}
 	.icon {
 		max-width: 1.5em;
 		max-height: 1.5em;
 	}
+	
+	p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
 }
 
 @media (max-width: 800px) {
 	/* Styles spécifiques pour les écrans de 800px ou moins */
 	p {
-		max-width: 80%;
+		max-width: 90%;
+		font-size: 0.85rem;
+        line-height: 1.5;
+        text-align: left;
 	}
+	
+	html, body {
+        max-width: 95%;
+        margin: 1.5em auto;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles pour les petits écrans mobiles */
+    html, body {
+        max-width: 100%;
+        margin: 1em auto;
+        padding: 0 0.5em;
+    }
+    
+    p {
+        max-width: 100%;
+        font-size: 0.8rem;
+        line-height: 1.45;
+        text-align: left;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    .column {
+        width: 95%;
+        padding: 0 0.5em;
+    }
 }
