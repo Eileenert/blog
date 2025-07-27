@@ -21,7 +21,9 @@ a:hover {
 	color: #646464;
 }
 
-
+p#motivation{
+	font-size: 1.5em;
+}
 
 h1, h3 {
 	letter-spacing: -0.01em;
@@ -69,12 +71,6 @@ img {
 	max-width: 100%;
 }
 
-/* Enlever les cadres des GIFs */
-img[src*=".gif"] {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
-
 .column-list {
 	display: flex;
 	justify-content: space-between;
@@ -114,8 +110,6 @@ p {
 	text-align: justify;
 	margin: 0 auto;
 	max-width: 100%;
-	font-size: 1.4rem;
-	line-height: 1.5;
 }
 
 .icon {
@@ -186,70 +180,6 @@ p {
     font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-/* Styles pour le bouton Go Back */
-button {
-    background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
-    color: #D4D4D4;
-    border: 2px solid #404040;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-button::before {
-    content: '←';
-    font-size: 18px;
-    transition: transform 0.3s ease;
-}
-
-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 212, 212, 0.1), transparent);
-    transition: left 0.6s ease;
-}
-
-button:hover::after {
-    left: 100%;
-}
-
-button:hover {
-    background: linear-gradient(135deg, #3a3a3a 0%, #4a4a4a 50%, #3a3a3a 100%);
-    border-color: #606060;
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
-}
-
-button:hover::before {
-    transform: translateX(-3px);
-}
-
-button:active {
-    transform: translateY(0) scale(0.98);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.1s ease;
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(212, 212, 212, 0.2);
-}
-
 
 
 @media (max-width: 1000px) {
@@ -267,93 +197,22 @@ button:focus {
 		display: block;
 		justify-content: space-between;
 	}
-
-    button {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 15px;
-        padding: 14px 24px;
-        font-size: 18px;
-    }
-    
-    p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
 }
 
 @media (min-width: 800px) and (max-width: 1000px) {
 	/* Styles spécifiques pour les écrans entre 800px et 1000px */
 	.column {
-		font-size: 1.2em;
+		font-size: 1.75em;
 	}
 	.icon {
 		max-width: 1.5em;
 		max-height: 1.5em;
 	}
-	
-	p {
-        font-size: 0.95rem;
-        line-height: 1.55;
-    }
 }
 
 @media (max-width: 800px) {
 	/* Styles spécifiques pour les écrans de 800px ou moins */
 	p {
-		max-width: 90%;
-		font-size: 0.85rem;
-        line-height: 1.5;
-        text-align: left;
+		max-width: 80%;
 	}
-	
-	html, body {
-        max-width: 95%;
-        margin: 1.5em auto;
-    }
-    
-    .page-title {
-        font-size: 2rem;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Styles pour les petits écrans mobiles */
-    html, body {
-        max-width: 100%;
-        margin: 1em auto;
-        padding: 0 0.5em;
-    }
-    
-    p {
-        max-width: 100%;
-        font-size: 0.8rem;
-        line-height: 1.45;
-        text-align: left;
-    }
-    
-    .page-title {
-        font-size: 1.75rem;
-    }
-    
-    h1 {
-        font-size: 1.3rem;
-    }
-    
-    h3 {
-        font-size: 1.1rem;
-    }
-    
-    .column {
-        width: 95%;
-        padding: 0 0.5em;
-    }
 }

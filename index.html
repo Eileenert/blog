@@ -85,25 +85,10 @@
                     <li>Puparia (short animation)</li>
                 </ul>
                 <hr />
-                <p>Last edited: <span id="lastEdited"></span></p>
+                <p>Last edited: 25/05/2025</p>
             </div>
         </div>
     </article>
-
-    <script>
-        // Met à jour automatiquement la date du dernier edit
-        function updateLastEdited() {
-            const now = new Date();
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const year = now.getFullYear();
-            
-            document.getElementById('lastEdited').textContent = `${day}/${month}/${year}`;
-        }
-        
-        // Met à jour la date au chargement de la page
-        updateLastEdited();
-    </script>
 </body>
 
 </html>

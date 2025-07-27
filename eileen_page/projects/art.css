@@ -112,6 +112,7 @@ img[src*=".gif"] {
 
 .column {
     padding: 0 1em;
+    flex: 1;
 }
 
 .column:first-child {
@@ -120,6 +121,42 @@ img[src*=".gif"] {
 
 .column:last-child {
     padding-right: 0;
+}
+
+/* Classes spécifiques pour la section Deconstructed Art */
+.art-image-column {
+    flex: 0 0 20%;
+}
+
+.art-image-column img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.art-text-column {
+    flex: 0 0 80%;
+}
+
+/* Styles pour les images */
+figure.image {
+    margin: 1em 0;
+}
+
+figure.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 0.5em;
+    font-style: italic;
 }
 
 
@@ -246,25 +283,32 @@ button:focus {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(212, 212, 212, 0.2);
 }
 
-@media (max-width:700px) {
+@media (max-width: 1000px) {
+    /* Styles communs pour les écrans de 1000px ou moins */
     .page-body {
-        padding: 5%;
+        padding: 4%;
     }
 
     .page-title {
         text-align: center;
+        font-size: 2.2rem;
     }
 
     .column-list {
-        display: flex;
-        justify-content: space-between;
+        display: block;
+    }
+
+    .column {
+        width: 100% !important;
+        padding: 0;
+        margin-bottom: 2em;
     }
 
     .block-color-gray_background {
-        justify-content: center;
+        text-align: center;
     }
 
-    .page-header-icon, .page-header-icon-with-cover{
+    .page-header-icon, .page-header-icon-with-cover {
         text-align: center;
     }
 
@@ -274,5 +318,79 @@ button:focus {
         margin-bottom: 15px;
         padding: 14px 24px;
         font-size: 18px;
+    }
+
+    /* Améliorer l'affichage des images sur tablettes */
+    figure.image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 1em auto;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Styles spécifiques pour les écrans de 800px ou moins */
+    html, body {
+        max-width: 95%;
+        margin: 1.5em auto;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 0.85rem;
+        margin-top: 0.5em;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles pour les petits écrans mobiles */
+    html, body {
+        max-width: 100%;
+        margin: 1em auto;
+        padding: 0 0.5em;
+    }
+
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    .column {
+        margin-bottom: 1.5em;
+    }
+
+    figure.image {
+        margin-bottom: 1em;
+    }
+
+    figure.image img {
+        width: 100% !important;
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
