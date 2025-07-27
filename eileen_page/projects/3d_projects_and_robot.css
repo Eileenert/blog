@@ -423,17 +423,65 @@ ul>li {
     padding-left: 0.1em;
 }
 
-/* Style spécifique pour la liste PC setup */
+/* Style uniforme pour toutes les listes de composants */
+.component-list {
+    max-width: 500px;
+    margin: 1em auto;
+    text-align: left;
+    padding-left: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.component-list li {
+    padding-left: 0;
+    margin-bottom: 0.3em;
+    text-indent: -1.2em;
+    padding-left: 1.2em;
+}
+
+/* Style spécifique pour la liste PC setup - DEPRECATED */
 .list {
     max-width: 400px;
     margin: auto;
     text-align: left;
     padding-left: 0;
+    list-style: none;
 }
 
 .list li {
     padding-left: 0;
     margin-bottom: 0.3em;
+}
+
+/* Style uniforme pour toutes les listes avec points - DEPRECATED */
+.bulleted-list {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+    padding-left: 0;
+    list-style: none;
+}
+
+.bulleted-list li {
+    padding-left: 0;
+    margin-bottom: 0.3em;
+    position: relative;
+}
+
+.bulleted-list li::before {
+    content: "•";
+    position: absolute;
+    left: -20px;
+    color: inherit;
+}
+
+/* Centrage des conteneurs de listes */
+.column ul,
+.column .list,
+.column .bulleted-list,
+.column .component-list {
+    margin: 1em auto;
 }
 
 
@@ -458,7 +506,7 @@ p {
 
 .block-color-gray_background {
     background: #252525;
-    height: ^3.5em;
+    height: 3.5em;
     display: flex;
     align-items: center;
     justify-content: center;

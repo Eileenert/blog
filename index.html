@@ -90,17 +90,19 @@
         </div>
     </article>
      <script>
-        // Met à jour automatiquement la date du dernier edit
+        // Met à jour automatiquement la date et l'heure du dernier edit
         function updateLastEdited() {
             const now = new Date();
             const day = String(now.getDate()).padStart(2, '0');
             const month = String(now.getMonth() + 1).padStart(2, '0');
             const year = now.getFullYear();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
             
-            document.getElementById('lastEdited').textContent = `${day}/${month}/${year}`;
+            document.getElementById('lastEdited').textContent = `${day}/${month}/${year} at ${hours}:${minutes}`;
         }
         
-        // Met à jour la date au chargement de la page
+        // Met à jour la date et l'heure au chargement de la page
         updateLastEdited();
     </script>
 </body>
