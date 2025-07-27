@@ -25,7 +25,11 @@
     <article class="sans">
         <header>
             <img class="page-cover-image" src="eileen_page/images/girl_whale.png" alt="Cover image">
-            <div class="page-header-icon"><span class="icon">🐋</span></div>
+            <div class="page-header-icon">
+                <div class="logo-container" onclick="triggerFunAnimation(this)" onmouseover="playHoverSound()">
+                    <img class="icon" src="eileen_page/images/logo.jpg" alt="Logo" />
+                </div>
+            </div>
             <h1 class="page-title">Eileen's page</h1>
             <figure class="block-color-gray_background">
                 <div><span class="icon">🌊</span> My little page to feel motivated<strong> ^-^</strong></div>
@@ -53,8 +57,6 @@
                     <li><a href="https://energizelab.com/consumerview/eilik" target="_blank">Eilik robot - Pink Version
                             (Blue is cool too)</a></li>
                     <li>Tubes nixie 😍</li>
-                    <li>RTX 4080 Super</li>
-                    <li>NZXT Kraken Elite 360</li>
                 </ul>
             </div>
             <div class="column">
@@ -87,11 +89,148 @@
                     <li>Puparia (short animation)</li>
                 </ul>
                 <hr />
-                <p>Last edited: 27/07/2025</p>
+                <p>Last edited: 25/05/2025</p>
             </div>
         </div>
     </article>
 
+    <script>
+        function triggerFunAnimation(element) {
+            // Ajouter la classe d'animation
+            element.classList.add('clicked');
+            
+            // Créer des émojis qui volent autour
+            createFlyingEmojis();
+            
+            // Effet de confettis
+            createConfetti();
+            
+            // Retirer la classe après l'animation
+            setTimeout(() => {
+                element.classList.remove('clicked');
+            }, 1000);
+        }
+        
+        function createFlyingEmojis() {
+            const emojis = ['🎉', '✨', '🌟', '💖', '🎈', '🦋', '🌸', '💫'];
+            
+            for (let i = 0; i < 8; i++) {
+                const emoji = document.createElement('div');
+                emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.position = 'fixed';
+                emoji.style.fontSize = '24px';
+                emoji.style.zIndex = '1000';
+                emoji.style.pointerEvents = 'none';
+                emoji.style.left = '50%';
+                emoji.style.top = '20%';
+                emoji.style.transform = 'translate(-50%, -50%)';
+                
+                document.body.appendChild(emoji);
+                
+                // Animation aléatoire
+                const angle = (i * 45) + Math.random() * 30;
+                const distance = 100 + Math.random() * 100;
+                const duration = 1 + Math.random() * 0.5;
+                
+                emoji.animate([
+                    { 
+                        transform: 'translate(-50%, -50%) scale(0) rotate(0deg)',
+                        opacity: 1
+                    },
+                    { 
+                        transform: `translate(${Math.cos(angle * Math.PI / 180) * distance}px, ${Math.sin(angle * Math.PI / 180) * distance}px) scale(1.5) rotate(360deg)`,
+                        opacity: 0
+                    }
+                ], {
+                    duration: duration * 1000,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                });
+                
+                // Nettoyer après l'animation
+                setTimeout(() => {
+                    document.body.removeChild(emoji);
+                }, duration * 1000);
+            }
+        }
+        
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#4ecdc4', '#45b7d1', '#feca57', '#ff9ff3', '#54a0ff'];
+            
+            for (let i = 0; i < 15; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '8px';
+                confetti.style.height = '8px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = '50%';
+                confetti.style.top = '20%';
+                confetti.style.zIndex = '999';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+                
+                document.body.appendChild(confetti);
+                
+                const randomX = (Math.random() - 0.5) * 300;
+                const randomY = Math.random() * 200 + 100;
+                const randomRotation = Math.random() * 720;
+                
+                confetti.animate([
+                    { 
+                        transform: 'translate(-50%, -50%) scale(0) rotate(0deg)',
+                        opacity: 1
+                    },
+                    { 
+                        transform: `translate(${randomX}px, ${randomY}px) scale(1) rotate(${randomRotation}deg)`,
+                        opacity: 0
+                    }
+                ], {
+                    duration: 1500 + Math.random() * 500,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                });
+                
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        document.body.removeChild(confetti);
+                    }
+                }, 2000);
+            }
+        }
+        
+        function playHoverSound() {
+            // Vibration légère sur mobile si supportée
+            if ('vibrate' in navigator) {
+                navigator.vibrate(50);
+            }
+        }
+        
+        // Easter egg : triple clic pour une animation spéciale
+        let clickCount = 0;
+        let clickTimer = null;
+        
+        document.querySelector('.logo-container').addEventListener('click', function() {
+            clickCount++;
+            
+            if (clickCount === 3) {
+                // Animation spéciale pour triple clic
+                this.style.animation = 'funkyBounce 0.5s ease-in-out 3';
+                createMegaConfetti();
+                clickCount = 0;
+            }
+            
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+            }, 500);
+        });
+        
+        function createMegaConfetti() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    createConfetti();
+                }, i * 50);
+            }
+        }
+    </script>
 </body>
 
 </html>
