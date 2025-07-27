@@ -180,43 +180,6 @@ p {
     font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-
-
-@media (max-width: 1000px) {
-	/* Styles communs pour les écrans de 1000px ou moins */
-	div, .page-title, .column-list {
-		text-align: center;
-	}
-	.column {
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
-	}
-	
-	.column-list {
-		display: block;
-		justify-content: space-between;
-	}
-}
-
-@media (min-width: 800px) and (max-width: 1000px) {
-	/* Styles spécifiques pour les écrans entre 800px et 1000px */
-	.column {
-		font-size: 1.75em;
-	}
-	.icon {
-		max-width: 1.5em;
-		max-height: 1.5em;
-	}
-}
-
-@media (max-width: 800px) {
-	/* Styles spécifiques pour les écrans de 800px ou moins */
-	p {
-		max-width: 80%;
-	}
-}
-
 /* Styles pour le bouton Go Back */
 button {
     background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 50%, #2a2a2a 100%);
@@ -279,4 +242,39 @@ button:active {
 button:focus {
     outline: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(212, 212, 212, 0.2);
+}
+
+@media (max-width: 1000px) {
+	/* Styles communs pour les écrans de 1000px ou moins */
+	div, .page-title, .column-list {
+		text-align: center;
+	}
+	.column {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+	
+	.column-list {
+		display: block;
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+	/* Styles spécifiques pour les écrans entre 800px et 1000px */
+	.column {
+		font-size: 1.75em;
+	}
+	.icon {
+		max-width: 1.5em;
+		max-height: 1.5em;
+	}
+}
+
+@media (max-width: 800px) {
+	/* Styles spécifiques pour les écrans de 800px ou moins */
+	p {
+		max-width: 80%;
+	}
 }
