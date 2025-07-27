@@ -228,16 +228,6 @@ ul {
 /* =============================================== */
 
 /* Animations fun pour le logo */
-.page-header-icon {
-    position: relative;
-    display: inline-block;
-}
-
-.logo-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
 
 .logo-container .icon {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
