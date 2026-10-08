@@ -1,11 +1,11 @@
 const logoFrame = document.querySelector(".logo-frame");
 const sparkleImages = [
-  "images/paillettes/planete.png",
-  "images/paillettes/etoile1.png",
-  "images/paillettes/etoile2.png",
-  "images/paillettes/etoile3.png",
-  "images/paillettes/coeur1.png",
-  "images/paillettes/coeur2.png",
+  "images/paillettes/planet.png",
+  "images/paillettes/star1.png",
+  "images/paillettes/star2.png",
+  "images/paillettes/star3.png",
+  "images/paillettes/heart1.png",
+  "images/paillettes/heart2.png",
 ];
 
 function releaseSparkles() {
