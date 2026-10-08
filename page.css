@@ -1,0 +1,248 @@
+:root {
+  --pink: #ef78c0;
+  --green: #68cc63;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 24px;
+  background-color: var(--pink);
+  background-image: url("images/background.jpg");
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 80% auto;
+  color: var(--white);
+  font-family: "Bitcount Grid Single", sans-serif;
+}
+
+main {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blog-page {
+  width: min(100%, 850px);
+}
+
+.blog-header {
+  margin-bottom: 42px;
+}
+
+.blog-kicker,
+.post-date {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.blog-header h1 {
+  margin: 10px 0 12px;
+}
+
+.blog-intro {
+  margin: 0 auto;
+  font-size: 19px;
+}
+
+.posts {
+  display: grid;
+  gap: 24px;
+  text-align: left;
+}
+
+.post-card {
+  padding: 28px 32px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  background: rgba(94, 91, 91, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.post-card:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+.post-card h2 {
+  margin: 12px 0 8px;
+  font-size: clamp(25px, 5vw, 36px);
+  font-weight: 400;
+}
+
+.post-card > p:not(.post-date) {
+  max-width: 650px;
+  margin: 0 0 22px;
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.post-link {
+  color: var(--white);
+  font-size: 18px;
+  text-underline-offset: 4px;
+}
+
+.projects-page {
+  width: min(100%, 1100px);
+}
+
+.projects-page h2 {
+  font-weight: 400;
+  font-size: clamp(15px, 5vw, 36px);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: none;
+  gap: 24px;
+  justify-content: center;
+  margin: 36px auto 0;
+}
+
+.project-item {
+  width: 350px;
+  text-align: center;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.28);
+  color: var(--white);
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.project-item p {
+  margin: 12px 0 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.65);
+  transform: scale(1.025);
+}
+
+.project-card:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 5px;
+}
+
+h1 {
+  font-size: clamp(32px, 8vw, 56px);
+  font-weight: 400;
+}
+
+
+.back-link {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  z-index: 20;
+  display: block;
+  width: 200px;
+  line-height: 0;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.back-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.45));
+  transform: scale(1.06);
+}
+
+.back-link:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 5px;
+}
+
+@media (max-width: 1150px) {
+  .projects-page {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 28px 16px;
+    }
+
+    .blog-header {
+      margin-bottom: 30px;
+    }
+
+    .post-card {
+      padding: 22px;
+      border-radius: 22px;
+    }
+
+    .back-link {
+      top: 12px;
+      left: 16px;
+      width: 64px;
+    }
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 350px));
+    grid-template-rows: none;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .project-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-grid {
+    grid-template-columns: minmax(0, 350px);
+    gap: 18px;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 390px) {
+  .project-grid {
+    grid-template-columns: minmax(0, 100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .back-link {
+    top: 12px;
+    left: 16px;
+    width: 64px;
+  }
+}

@@ -2,6 +2,8 @@
 :root {
   --pink: #ef78c0;
   --green: #68cc63;
+  --white: #fff;
+  --black: #000;
 }
 
 html {
@@ -10,15 +12,16 @@ html {
 }
 
 body {
-  min-height: 50vh;
+  min-height: 100vh;
   margin: 0;
   background-color: var(--pink);
-  background-image: radial-gradient(circle, var(--pink), var(--green));
+  background-image: radial-gradient(circle, var(--pink) 30%, var(--green));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 50px;
+  padding-bottom: 50px;
   box-sizing: border-box;
 }
 
@@ -44,6 +47,53 @@ body {
   object-fit: cover;
 }
 
+.logo-frame {
+  cursor: pointer;
+}
+
+.logo-frame:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 6px;
+}
+
+.logo-frame.shake {
+  animation: logo-shake 520ms ease-in-out;
+}
+
+.sparkle {
+  position: fixed;
+  z-index: 10;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  background-image: var(--sparkle-image);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  animation: sparkle-fall 1100ms cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+
+@keyframes logo-shake {
+  0%, 100% { transform: rotate(0); }
+  15% { transform: rotate(-8deg); }
+  30% { transform: rotate(8deg); }
+  45% { transform: rotate(-6deg); }
+  60% { transform: rotate(6deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+@keyframes sparkle-fall {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--sparkle-x), var(--sparkle-y))
+      rotate(var(--sparkle-rotation)) scale(0.2);
+  }
+}
+
 .title-block {
   position: relative;
   width: max-content;
@@ -56,16 +106,172 @@ h1 {
   font-family: "Bitcount Grid Single";
   font-weight: 400;
   font-size: 30px;
-  color: #fff;
+  color: var(--white);
+}
+
+.title-block h2 {
+  margin: 0px 0 0;
+  text-align: center;
+  font-family: "Bitcount Grid Single";
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white);
 }
 
 .last-edited {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -200px;
   margin: 0;
   font-family: "Bitcount Grid Single";
   font-size: 14px;
-  color: #fff;
+  color: var(--white);
   white-space: nowrap;
+}
+
+.star-menu {
+  position: relative;
+  width: min(900px, calc(100vw - 32px));
+  height: 500px;
+  margin-top: 34px;
+}
+
+.star-link {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  aspect-ratio: 1;
+  color: var(--white);
+  text-decoration: none;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.star-blabla {
+  top: 12px;
+  left: 2%;
+}
+
+.star-art {
+  top: 26px;
+  right: 5%;
+}
+
+
+.star-projects {
+  top: 180px;
+  left: 40%;
+}
+
+.star-code {
+  top: 400px;
+  left: 2%;
+}
+  
+.star-about {
+  top: 430px;
+  left: 70%;
+  
+}
+
+.star-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.star-link span {
+  position: absolute;
+  font-family: "Bitcount Grid Single";
+  font-size: 17px;
+  text-shadow: 1px 1px 2px var(--black);
+}
+
+.star-link:hover,
+.star-link:focus-visible {
+  transform: scale(1.12) rotate(10deg);
+  filter: drop-shadow(0 0 10px var(--white));
+}
+
+.star-link:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 5px;
+}
+
+@media (max-width: 600px) {
+  .title-block {
+    width: 100%;
+  }
+
+  .title-block h1 {
+    margin-top: 32px;
+  }
+
+  .last-edited {
+    position: static;
+    margin-top: 6px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .star-menu {
+    width: calc(100vw - 24px);
+    height: 445px;
+    margin-top: 24px;
+  }
+
+  .star-link {
+    width: clamp(100px, 31vw, 125px);
+  }
+
+  .star-blabla {
+    top: 0;
+    left: 0;
+  }
+
+  .star-art {
+    top: 12px;
+    right: 0;
+  }
+
+  .star-projects {
+    top: 135px;
+    left: 34%;
+  }
+
+  .star-code {
+    top: 285px;
+    left: 0;
+  }
+
+  .star-about {
+    top: 320px;
+    right: 0;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .star-menu {
+    height: 410px;
+  }
+
+  .star-link {
+    width: 96px;
+  }
+
+  .star-projects {
+    top: 125px;
+    left: 32%;
+  }
+
+  .star-code {
+    top: 265px;
+  }
+
+  .star-about {
+    top: 300px;
+  }
 }
