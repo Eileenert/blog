@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--pink);
-  background-image: radial-gradient(circle, var(--pink) 30%, var(--green));
+  background-image: radial-gradient(circle, var(--pink) 40%, var(--green));
   display: flex;
   flex-direction: column;
   align-items: center;
