@@ -1,0 +1,71 @@
+
+:root {
+  --pink: #ef78c0;
+  --green: #68cc63;
+}
+
+html {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 50vh;
+  margin: 0;
+  background-color: var(--pink);
+  background-image: radial-gradient(circle, var(--pink), var(--green));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  width: min(150px, 100%);
+  aspect-ratio: 1;
+}
+
+.logo-frame {
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.logo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title-block {
+  position: relative;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+}
+
+h1 {
+  margin: 32px 0 0;
+  text-align: center;
+  font-family: "Bitcount Grid Single";
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+}
+
+.last-edited {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-family: "Bitcount Grid Single";
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+}
