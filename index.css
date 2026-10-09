@@ -143,6 +143,7 @@ h1 {
   justify-content: center;
   width: 200px;
   aspect-ratio: 1;
+  z-index: 2;
   color: var(--white);
   text-decoration: none;
   transition: transform 180ms ease, filter 180ms ease;
@@ -200,6 +201,8 @@ h1 {
   outline-offset: 5px;
 }
 
+
+
 @media (max-width: 600px) {
   .title-block {
     width: 100%;
@@ -251,6 +254,7 @@ h1 {
     right: 0;
   }
 
+
 }
 
 @media (max-width: 380px) {
@@ -274,4 +278,6 @@ h1 {
   .star-about {
     top: 300px;
   }
+
+
 }
