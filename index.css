@@ -2,8 +2,31 @@
 :root {
   --pink: #ef78c0;
   --green: #68cc63;
+  --link-yellow: #f2ff00;
   --white: #fff;
   --black: #000;
+}
+
+a:not(.star-link):not(.back-link) {
+  color: var(--link-yellow);
+  text-decoration: none;
+}
+
+.link-wave {
+  display: inline-flex;
+  color: var(--link-yellow);
+}
+
+.link-character {
+  display: inline-block;
+  position: relative;
+  transform-origin: center;
+  transition: transform 280ms ease;
+}
+
+.link-wave:hover .link-character,
+.link-wave:focus-visible .link-character {
+  transform: translateY(var(--wave-y));
 }
 
 html {

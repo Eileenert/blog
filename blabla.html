@@ -7,10 +7,12 @@
     <title>Blabla - Treneelie's page</title>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="images/blabla.png">
     <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="sparkle.css">
 </head>
 
-<body>
+<body class="blabla-page">
     <a class="back-link" href="index.html" aria-label="Back to home"><img src="images/back.png" alt="Back to home"></a>
     <main class="blog-page">
         <header class="blog-header">
@@ -20,29 +22,31 @@
         </header>
 
         <section class="posts" aria-label="Blog articles">
-            <article class="post-card" id="post-01">
+            <a class="post-card" id="post-01" href="#post-01">
                 <p class="post-date">08 October 2026</p>
                 <h2>First post</h2>
                 <p>A first post to introduce the blog and start sharing my thoughts.</p>
-                <a class="post-link" href="#post-01">Read the post →</a>
-            </article>
+                <span class="post-link">Read the post →</span>
+            </a>
 
-            <article class="post-card" id="post-02">
+            <a class="post-card" id="post-02" href="#post-02">
                 <p class="post-date">To come</p>
                 <h2>A new project</h2>
                 <p>A place to tell the behind-the-scenes of a creation, an idea, or a discovery.</p>
-                <a class="post-link" href="#post-02">Read the post →</a>
-            </article>
+                <span class="post-link">Read the post →</span>
+            </a>
 
-            <article class="post-card" id="post-03">
+            <a class="post-card" id="post-03" href="#post-03">
                 <p class="post-date">To come</p>
                 <h2>Notes and inspirations</h2>
                 <p>Links, images and everything that deserves to be kept somewhere.</p>
-                <a class="post-link" href="#post-03">Read the post →</a>
-            </article>
+                <span class="post-link">Read the post →</span>
+            </a>
         </section>
 
     </main>
+    <script src="link-effects.js"></script>
+    <script src="sparkle.js"></script>
 </body>
 
 </html>

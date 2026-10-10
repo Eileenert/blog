@@ -1,20 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me - Treneelie's page</title>
+    <link rel="icon" href="images/about_me.png">
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="sparkle.css">
 </head>
 
-<body>
-    <a class="back-link" href="index.html" aria-label="Back to home"><img src="images/back.png" alt="Back to home"></a>
-    <main>
-        <h1>about me</h1>
+<body class="about-page">
+    <a class="back-link" href="index.html" aria-label="Back to home">
+        <img src="images/back.png" alt="Back to home">
+    </a>
+
+    <main class="about-content">
+        <header class="about-header">
+            <h1>about me</h1>
+            <p class="art-intro">Mimimimimimi</p>
+        </header>
+
+        <section class="about-intro-card" aria-labelledby="about-title">
+            <figure class="about-photo">
+                <img src="images/profile.jpg" alt="About Treneelie">
+            </figure>
+            <div class="about-text">
+                <h2 id="about-title">Hi, I'm Treneelie!</h2>
+                <p>or Eileen if you know me outside of the internet.</p>
+                <p>
+                    I love creating things and I am a very curious person. I am a student in microtechnique and I like to discover new hobbies or new center of interest.
+                </p>
+                <p>I like to say dumb things so don't take them seriously.</p>
+                <img class="about-bear" src="images/bear.gif" alt="Cute animated bear">
+            </div>
+        </section>
+
+        <section class="social-section" aria-labelledby="social-title">
+            <h2 id="social-title">Find me online</h2>
+            <div class="social-grid">
+                <a class="social-card social-twitch" href="https://www.twitch.tv/Treneelie" target="_blank"
+                    rel="noreferrer">
+                    <span class="social-icon" aria-hidden="true">♢</span>
+                    <span class="social-info">
+                        <strong>Twitch</strong>
+                        <small>@Treneelie</small>
+                    </span>
+                    <span class="social-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="social-card social-youtube" href="https://www.youtube.com/@Treneelie" target="_blank"
+                    rel="noreferrer">
+                    <span class="social-icon" aria-hidden="true">▶</span>
+                    <span class="social-info">
+                        <strong>YouTube</strong>
+                        <small>@Treneelie</small>
+                    </span>
+                    <span class="social-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="social-card social-instagram" href="https://www.instagram.com/treneelie_" target="_blank"
+                    rel="noreferrer">
+                    <span class="social-icon" aria-hidden="true">◎</span>
+                    <span class="social-info">
+                        <strong>Instagram</strong>
+                        <small>@treneelie_</small>
+                    </span>
+                    <span class="social-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
     </main>
+
+    <script src="link-effects.js"></script>
+    <script src="sparkle.js"></script>
 </body>
 
 </html>

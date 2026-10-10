@@ -1,20 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code - Treneelie's page</title>
+    <link rel="icon" href="images/code.png">
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="sparkle.css">
 </head>
 
-<body>
-    <a class="back-link" href="index.html" aria-label="Back to home"><img src="images/back.png" alt="Back to home"></a>
-    <main>
-        <h1>code</h1>
+<body class="code-page">
+    <a class="back-link" href="index.html" aria-label="Back to home">
+        <img src="images/back.png" alt="Back to home">
+    </a>
+
+    <main class="code-content">
+        <header class="code-header">
+            <h1>code</h1>
+            <a class="code-github-link" href="https://github.com/Eileenert" target="_blank" rel="noreferrer">
+                <span class="code-github-icon">⌘</span>
+                <span><strong>Eileenert</strong><small>Lots of cool projects.</small></span>
+                <span class="code-github-url">github.com/Eileenert</span>
+            </a>
+        </header>
+
+        <div class="code-sections">
+            <section class="code-section" aria-labelledby="clock-title">
+                <h2 id="clock-title">🕓 Clock</h2>
+                <div class="code-feature">
+                    <div class="code-embed">
+                        <iframe src="http://eileenert.github.io/clock.io/" title="Clock project"></iframe>
+                    </div>
+                    <div class="code-copy">
+                        <p>The animation is different day and night.</p>
+                        <a class="code-project-link" href="http://eileenert.github.io/clock.io/" target="_blank"
+                            rel="noreferrer">Open the clock project →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="code-section" aria-labelledby="tictactoe-title">
+                <h2 id="tictactoe-title">⚪ Tic tac toe ❌</h2>
+                <a class="code-project-link" href="https://github.com/Eileenert/tictactoe" target="_blank"
+                    rel="noreferrer">View tictactoe on GitHub →</a>
+                <div class="code-image-grid">
+                    <figure class="code-image">
+                        <img src="images/code/tictactoe_3x3.png" alt="3x3 tic-tac-toe game">
+                        <figcaption>3x3 basic tic-tac-toe game</figcaption>
+                    </figure>
+                    <figure class="code-image">
+                        <img src="images/code/tictactoe_9x9.png" alt="9x9 tic-tac-toe game">
+                        <figcaption>9x9 tic-tac-toe game</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="code-section" aria-labelledby="brick-title">
+                <h2 id="brick-title">🧱 Brick Breaker</h2>
+                <p>This is a project I did for my computer class.</p>
+                <a class="code-project-link" href="https://eileenert.github.io/Brick-Breaker/" target="_blank"
+                    rel="noreferrer">Open Brick Breaker →</a>
+                <div class="code-embed code-embed-large">
+                    <iframe src="https://eileenert.github.io/Brick-Breaker/" title="Brick Breaker project"
+                        sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"></iframe>
+                </div>
+            </section>
+
+            <section class="code-section" aria-labelledby="pet-title">
+                <h2 id="pet-title">🌺 Desktop pet</h2>
+                <a class="code-project-link" href="https://github.com/Eileenert/desktop-pet" target="_blank"
+                    rel="noreferrer">View desktop pet on GitHub →</a>
+                <div class="code-copy">
+                    <p>Ever since I learned to program, I have always wanted to make one.</p>
+                    <p>It has different actions, colors and we can generate more than one at a time. You can move it
+                        anywhere on the screen and ask it to do specific actions.</p>
+                </div>
+                <div class="code-pet-gallery">
+                    <figure class="code-image"><img src="images/code/pink.png" alt="Pink desktop pet"></figure>
+                    <figure class="code-image"><img src="images/code/purple.png" alt="Purple desktop pet"></figure>
+                    <figure class="code-image"><img src="images/code/white.png" alt="White desktop pet"></figure>
+                </div>
+                <p class="code-note">Report (French), does not fully correspond to the latest version of the code.</p>
+            </section>
+
+            <section class="code-section" aria-labelledby="python-title">
+                <h2 id="python-title">🐍 Python</h2>
+                <a class="code-github-link code-github-link-small" href="https://github.com/Eileenert/python"
+                    target="_blank" rel="noreferrer">
+                    <span class="code-github-icon">⌘</span>
+                    <span><strong>GitHub - Eileenert/python</strong><small>Small python projects.</small></span>
+                </a>
+                <p>In this repository you will find a lot of small python projects.</p>
+
+                <div class="python-projects">
+                    <article class="python-project python-project-featured">
+                        <div>
+                            <h3>2048</h3>
+                            <p>inspired by: <a href="https://github.com/yangshun/2048-python" target="_blank"
+                                    rel="noreferrer">yangshun/2048-python</a></p>
+                            <p>It's a solo game by Gabriele Cirulli, released on March 9, 2014.</p>
+                            <p>I took the original colors of the game but if someone wants to make me a color palette
+                                I'm up for it.</p>
+                        </div>
+                        <figure class="code-image"><img src="images/code/2048.png" alt="2048 Python game"></figure>
+                    </article>
+                    <article class="python-project"><h3>Cards</h3><p>Works like a pack of cards.</p><p>(inspired by the book by Vincent Le Goff)</p></article>
+                    <article class="python-project"><h3>Casino</h3><p>Little money game with game save.</p><p>(inspired by the book by Vincent Le Goff)</p></article>
+                    <article class="python-project"><h3>Choice</h3><p>For when there are difficult choices to make.</p><p>Allows you to keep the same lists of choices each time, to choose between different numbers, ranges of numbers or words.</p></article>
+                    <article class="python-project"><h3>Hangman</h3><p>A little hangman game with game save.</p><p>(inspired by the book by Vincent Le Goff)</p></article>
+                    <article class="python-project"><h3>Spy</h3><p>Spy game (the rules are explained at the beginning).</p><p>To play with several friends or family members (need at least 4 people).</p></article>
+                    <article class="python-project python-project-wide">
+                        <div><h3>Calculator</h3><p>A small calculator with tkinter.</p><p>It is pretty ugly :(</p></div>
+                        <figure class="code-image"><img src="images/code/calculator.png" alt="Tkinter calculator"></figure>
+                    </article>
+                    <article class="python-project python-project-wide">
+                        <div><h3>Snake game</h3><p>A basic snake game.</p><p>helped by: <a href="https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/" target="_blank" rel="noreferrer">GeeksforGeeks</a></p></div>
+                        <figure class="code-image"><img src="images/code/snake.png" alt="Snake game"></figure>
+                    </article>
+                    <article class="python-project"><h3>Sudoku checker</h3><p>Enter your sudoku and check if it is right.</p></article>
+                    <article class="python-project"><h3>Text morse</h3><p>Translate text to morse or vice-versa (morse into latin alphabet).</p><p>Hear morse signals (sound, after translation or directly).</p></article>
+                    <article class="python-project"><h3>Ytb_videoDownloader</h3><p>To download YouTube videos and its subtitles. It may be that for some video and subtitle it does not work; if you know why, I'd like you to send me a message :)</p></article>
+                </div>
+            </section>
+        </div>
     </main>
+    <script src="link-effects.js"></script>
+    <script src="sparkle.js"></script>
 </body>
 
 </html>
