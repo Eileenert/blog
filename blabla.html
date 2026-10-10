@@ -22,21 +22,21 @@
         </header>
 
         <section class="posts" aria-label="Blog articles">
-            <a class="post-card" id="post-01" href="#post-01">
-                <p class="post-date">08 October 2026</p>
+            <a class="post-card blog-post-link" id="post-01" href="posts/first-post.html">
+                <p class="post-date">10 October 2026</p>
                 <h2>First post</h2>
-                <p>A first post to introduce the blog and start sharing my thoughts.</p>
+                <p>To Come</p>
                 <span class="post-link">Read the post →</span>
             </a>
 
-            <a class="post-card" id="post-02" href="#post-02">
+            <a class="post-card blog-post-link" id="post-02" href="posts/new-project.html">
                 <p class="post-date">To come</p>
                 <h2>A new project</h2>
-                <p>A place to tell the behind-the-scenes of a creation, an idea, or a discovery.</p>
+                <p>To Come</p>
                 <span class="post-link">Read the post →</span>
             </a>
 
-            <a class="post-card" id="post-03" href="#post-03">
+            <a class="post-card blog-post-link" id="post-03" href="posts/notes-and-inspirations.html">
                 <p class="post-date">To come</p>
                 <h2>Notes and inspirations</h2>
                 <p>Links, images and everything that deserves to be kept somewhere.</p>
@@ -45,8 +45,17 @@
         </section>
 
     </main>
+    <div class="project-modal blog-modal" id="blog-modal" role="dialog" aria-modal="true"
+        aria-labelledby="blog-modal-title" hidden>
+        <div class="project-modal-window">
+            <h2 class="visually-hidden" id="blog-modal-title">Blog post</h2>
+            <button class="project-modal-close blog-modal-close" type="button" aria-label="Close post">×</button>
+            <iframe class="project-modal-frame blog-modal-frame" title="Blog post"></iframe>
+        </div>
+    </div>
     <script src="link-effects.js"></script>
     <script src="sparkle.js"></script>
+    <script src="blabla.js"></script>
 </body>
 
 </html>
