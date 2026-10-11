@@ -65,6 +65,12 @@ body.blabla-page .post-card .post-link {
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  margin: 0;
+  cursor: url("images/cursor.png"), auto;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -905,8 +911,8 @@ h1 {
 
 .project-modal-close {
   position: absolute;
-  top: 10px;
-  right: 14px;
+  top: 30px;
+  right: 40px;
   z-index: 1;
   width: 42px;
   height: 42px;
@@ -914,7 +920,6 @@ h1 {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.45);
   color: var(--white);
-  cursor: pointer;
   font-family: sans-serif;
   font-size: 30px;
   line-height: 1;
