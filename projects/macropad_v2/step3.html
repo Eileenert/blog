@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macropad V2 - Step 3: QMK and Vial</title>
+    <link rel="icon" href="../../images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../../sparkle.css">
+</head>
+
+<body>
+    <main class="project-detail">
+        <header class="project-header">
+            <h1>Step 3: QMK and Vial</h1>
+            <p class="project-intro">Installing the tools and flashing the firmware.</p>
+        </header>
+        <section class="project-section guide-content">
+            <img src="images/vial.png" alt="Interface Vial">
+            <h2>Software choices</h2>
+            <p>Vial makes it possible to quickly configure the keys, rotary encoder and LEDs without modifying the code
+                or reflashing the keyboard after every change. You need to install:</p>
+            <ul>
+                <li><a href="https://github.com/qmk/qmk_distro_msys/releases/tag/1.10.0" target="_blank"
+                        rel="noopener">QMK MSYS</a></li>
+                <li><a href="https://qmk.fm/toolbox" target="_blank" rel="noopener">QMK Toolbox</a></li>
+                <li><a href="https://get.vial.today/" target="_blank" rel="noopener">Vial</a></li>
+            </ul>
+            <p>QMK is open-source firmware that requires recompiling and flashing to modify the configuration. Vial is
+                an extension of QMK with a graphical interface that stores settings directly on the keyboard.</p>
+            <h2>Putting the code on the macropad</h2>
+            <p>In QMK MSYS, start by running:</p>
+            <pre><code>qmk setup</code></pre>
+            <p>Then clone the latest version of <a href="https://github.com/vial-kb/vial-qmk" target="_blank"
+                    rel="noopener">vial-qmk</a> into a new folder outside the existing QMK folder. GitHub Desktop can be
+                used if you prefer a graphical interface.</p>
+            <img src="images/github.png" alt="github">
+            <p>In QMK MSYS, create the keyboard with:</p>
+            <pre><code>cd /c/vial-qmk
+qmk new-keyboard</code></pre>
+            <ul>
+                <li>Keyboard Name : <code>3x3_v2</code></li>
+                <li>Using a Development Board : <code>y</code></li>
+                <li>Development Board : <code>promicro</code></li>
+                <li>Default Layout:
+                    none of the above</li>
+                <li>MCU : <code>atmega32u4</code></li>
+            </ul>
+            <p>Then complete the keyboard files using the <a href="https://github.com/Robopoly/Macropad" target="_blank"
+                    rel="noopener">code
+                    available on GitHub</a>.</p>
+            <p>In C:\vial-qmk\keyboards\3x3_v2, you need a keyboard.json file and a keymaps folder.</p>
+            <p>In the keymaps/vial folder, you need the files config.h, keymap.c, rules.mk, and vial.json.</p>
+            <p>For more information: <a href="https://get.vial.today/" target="_blank"
+                    rel="noopener">https://get.vial.today/</a>, <a href="https://qmk.fm/" target="_blank"
+                    rel="noopener">https://qmk.fm/</a>.
+                You can also modify the code to add layers and have multiple key configurations on the macropad. In this
+                code, I've only included one layer to save space.</p>
+            <h2>Compiling and flashing</h2>
+            <p>To compile in QMK MSYS:</p>
+            <pre><code>qmk compile -kb 3x3_v2 -km default
+Make 3x3_v2 :vial</code></pre>
+            <p>If you have problems compiling and just want to test if your macropad works, you will find the already
+                compiled file on GitHub.</p>
+            <p>In QMK Toolbox, select the compiled file, choose ATmega32U4 and enable Auto-Flash. Quickly press the SMD
+                button next to the Pro Micro twice. If the program indicates that it flashed but doesn't display a
+                lengthy explanation of more than three lines, it hasn't actually flashed. I know it's strange and
+                annoying, but sometimes you have to repeat the process several times until it works. You can now
+                configure the keys in Vial.</p>
+            <a class="guide-back" href="../macropad_v2.html">← Back to Macropad V2</a>
+        </section>
+    </main>
+    <script src="../../link-effects.js"></script>
+    <script src="../../sparkle.js"></script>
+</body>
+
+</html>

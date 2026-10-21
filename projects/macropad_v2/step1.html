@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macropad V2 - Step 1: Soldering</title>
+    <link rel="icon" href="../../images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../../sparkle.css">
+</head>
+
+<body>
+    <main class="project-detail">
+        <header class="project-header">
+            <h1>Step 1: Soldering</h1>
+            <p class="project-intro">Assembling the Macropad V2 components.</p>
+        </header>
+        <section class="project-section guide-content">
+            <h2>Kit contents</h2>
+            <ul>
+                <li>1x PCB</li>
+                <li>9x switches (clicky, linear or tactile)</li>
+                <li>9x hot swaps</li>
+                <li>1x 3 × 4 × 2 mm SMD switch</li>
+                <li>1x 0.91″ OLED display (128 × 32)</li>
+                <li>1x rotary encoder</li>
+                <li>9x SOD-123 SMD diodes</li>
+                <li>4x LEDs WS2812B</li>
+                <li>1x Arduino Pro Micro</li>
+                <li>1x USB-C cable</li>
+            </ul>
+            <h2>Assembly guide</h2>
+            <h3>Part 1: Diodes</h3>
+            <p>Solder diodes D1 to D9. Make sure that the stripe on each diode is on the same side as the stripe shown
+                on the PCB.</p>
+                <img src="images/diode1.png" alt="Diodes">
+                <img src="images/diode2.png" alt="Diodes">
+            <h3>Part 2: LEDs</h3>
+            <p>Solder LEDs LED1 to LED4. The small dot in the corner of each LED must be aligned with the small
+                rectangle on the PCB.</p>
+                <img src="images/LED.png" alt="LED">
+            <h3>Part 3: Hot swaps</h3>
+            <p>Solder hot swaps S1 to S9.</p>
+                <img src="images/hot_swap.png" alt="Hot swaps">
+            <h3>Part 4: SMD switch</h3>
+            <p>Solder the 3 × 4 × 2 mm SMD switch onto SW2.</p>
+            <img src="images/smd_switch.png" alt="smd switch">
+            <h3>Part 5: Arduino Pro Micro</h3>
+            <p>Solder the Arduino Pro Micro on the same side as the components soldered previously. Then cut the pins on
+                the other side, leaving 1 to 2 mm protruding, and apply insulating tape over the pins in the U2 rectangle.
+            </p>
+            <img src="images/arduino.png" alt="arduino pro micro">
+            <h3>Part 6: OLED display</h3>
+            <p>Solder the OLED display onto U2.</p>
+            <img src="images/oled_display.jpg" alt="oled display">
+            <h3>Part 7: Rotary encoder</h3>
+            <p>Solder the rotary encoder onto SW1.</p>
+            <p> ⚠ Pay close attention when soldering on the OLED screen side!</p>
+            <img src="images/rotary_encoder.png" alt="rotary encoder">
+            <h3>Part 8: Switches</h3>
+            <p>Add the switches.</p>
+            <img src="images/switches.jpg" alt="switches">
+            <p>The assembly is now complete. You can then 3D-print the keycaps, the case and a cap for the rotary encoder!</p>
+            <a class="guide-back" href="../macropad_v2.html">← Back to Macropad V2</a>
+        </section>
+    </main>
+    <script src="../../link-effects.js"></script>
+    <script src="../../sparkle.js"></script>
+</body>
+
+</html>

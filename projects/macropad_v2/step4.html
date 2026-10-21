@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macropad V2 - Step 4: Code explanation</title>
+    <link rel="icon" href="../../images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../../sparkle.css">
+</head>
+
+<body>
+    <main class="project-detail">
+        <header class="project-header">
+            <h1>Step 4: Code explanation</h1>
+            <p class="project-intro">Understanding the Vial QMK configuration files.</p>
+        </header>
+        <section class="project-section guide-content">
+            <h2><code>keyboard.json</code></h2>
+            <p>This file describes the keyboard's hardware characteristics and its compatibility with Vial:</p>
+            <ul>
+                <li><code>manufacturer</code>: Robopoly.</li>
+                <li><code>keyboard_name</code>: 3x3_v2.</li>
+                <li><code>bootloader</code>: atmel-dfu.</li>
+                <li><code>processor</code>: atmega32u4.</li>
+                <li><code>diode_direction</code>: COL2ROW.</li>
+                <li><code>matrix_pins</code>: columns F4, F5, F6 and rows E6, B4, B5.</li>
+                <li><code>vid</code>: 0xFEED and <code>pid</code>: 0x6060.</li>
+                <li><code>device_version</code>: 1.0.0.</li>
+                <li>The physical position of each key in the matrix.</li>
+            </ul>
+            <img src="images/keyboard_json.png" alt="keyboard.json file">
+            <h2><code>vial.json</code></h2>
+            <p>This file describes the keyboard for Vial. The <code>lighting</code> section indicates that the keyboard
+                has basic lighting with four LEDs. <code>Key Layout</code> is used by VIA to organize the key
+                graphically in its interface.</p>
+            <img src="images/vial_json.png" alt="vial.json file">
+            <h2><code>rules.mk</code></h2>
+            <p>This file enables or disables QMK and Vial features during compilation.</p>
+            <img src="images/rules_mk.png" alt="rules.mk file">
+            <h2><code>keymap.c</code></h2>
+            <p>This file defines the key layout, layers, macros and custom behavior of the macropad. To convert an image
+                into data that can be used by the OLED display, you can use <a href="https://javl.github.io/image2cpp/"
+                    target="_blank" rel="noopener">image2cpp</a>. Import your image and change the canvas size to
+                128×32. In output, change the "Code output format" to Plain bytes and choose 1 bit pixel.</p>
+            <img src="images/keymap_c.png" alt="keymap.c file">
+            <h2><code>config.h</code></h2>
+            <img src="images/config_h.jpg" alt="config.h file">
+            <p>This file is primarily used to define constants and compilation parameters for the keyboard firmware.</p>
+            <a class="guide-back" href="../macropad_v2.html">← Back to Macropad V2</a>
+        </section>
+    </main>
+    <script src="../../link-effects.js"></script>
+    <script src="../../sparkle.js"></script>
+</body>
+
+</html>

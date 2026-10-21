@@ -91,6 +91,99 @@ h2 {
   line-height: 1.6;
 }
 
+.project-section p + p {
+  margin-top: 14px;
+}
+
+.guide-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.guide-links a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 14px;
+  color: var(--white);
+  background: rgba(0, 0, 0, .12);
+  font-family: sans-serif;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.guide-links a:hover,
+.guide-links a:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, .24);
+}
+
+.guide-links strong {
+  color: var(--link-yellow);
+  font-size: 15px;
+}
+
+.guide-links span {
+  font-size: 16px;
+}
+
+.guide-section > p,
+.guide-content p,
+.guide-content li {
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.guide-content h3 {
+  margin: 26px 0 8px;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 400;
+}
+
+.guide-content ul,
+.guide-content ol {
+  margin: 8px 0 18px;
+  padding-left: 26px;
+}
+
+.guide-content li + li {
+  margin-top: 6px;
+}
+
+.guide-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 520px;
+  margin: 18px auto;
+  border: 2px solid rgba(255, 255, 255, .55);
+  border-radius: 14px;
+}
+
+.guide-content code,
+.guide-content pre {
+  font-family: Consolas, monospace;
+}
+
+.guide-content pre {
+  overflow-x: auto;
+  margin: 12px 0 18px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .3);
+  line-height: 1.5;
+}
+
+.guide-back {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: sans-serif;
+  text-underline-offset: 4px;
+}
+
 .component-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -185,7 +278,8 @@ h2 {
   }
 
   .component-list,
-  .project-gallery {
+  .project-gallery,
+  .guide-links {
     grid-template-columns: 1fr;
   }
 

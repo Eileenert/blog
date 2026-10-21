@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macropad V2 - Step 2: Circuit and components</title>
+    <link rel="icon" href="../../images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../../sparkle.css">
+</head>
+
+<body>
+    <main class="project-detail">
+        <header class="project-header">
+            <h1>Step 2: Circuit and components</h1>
+            <p class="project-intro">Understanding the Macropad V2's technical choices.</p>
+        </header>
+        <section class="project-section guide-content">
+            <h2>The circuit</h2>
+            <p>The circuit was designed in EasyEDA.</p>
+            <img src="images/Schematic_Nixie-Clock.png" alt="Macropad circuit schematic">
+            <h2>Why these components?</h2>
+            <p>I decided to make a 3 × 3 macropad: it is a good number of buttons, neither too many nor too few. To
+                connect the switches, each button can be assigned a microcontroller pin, or a matrix can be used.</p>
+            <h3>Direct connection</h3>
+            <ul>
+                <li>Simpler circuit and programming.</li>
+                <li>Better responsiveness: each button is read directly, without matrix scanning (polling), which
+                    reduces latency.</li>
+                <li>Simultaneous key detection: avoids the limitations associated with ghosting and key rollover in
+                    matrix keyboards.</li>
+                <li>Lower CPU usage, since no matrix needs to be scanned.</li>
+            </ul>
+            <h3>Matrix and diodes</h3>
+            <p>It is the most common approach.
+                There are two main ways to detect which key is pressed in a keyboard matrix. The first, and most common,
+                is to scan the rows or columns one at a time. A voltage is successively applied to each row (or column),
+                while the system checks which columns (or rows) register a connection. When a key is pressed, it creates
+                a connection between a row and a column, making it possible to identify its exact position. This scan is
+                repeated quickly to continuously update the keyboard state. This method is advantageous because it
+                optimizes energy consumption and reduces the load on the microcontroller by activating only part of the
+                matrix at a time.
+                A second approach consists of applying a voltage to all rows or all columns simultaneously. When a key
+                is
+                pressed, the system quickly scans all columns or rows to detect where the connection occurred. This
+                method
+                can provide faster detection, but it can also consume more power and requires more complex
+                microcontroller
+                management.
+                In general, the first method is preferred for its simplicity and efficiency, while the second can be
+                useful in specific cases requiring extremely fast detection.</p>
+            <p>
+                Diodes are also used to prevent ghosting, a phenomenon where some keys are not registered when several
+                keys are pressed simultaneously. I chose 1N4148 SMD SOD-123 diodes because they are widely used, fast
+                and reliable.</p>
+            <img src="images/matrice.png" alt="3 by 3 matrix">
+            <h3>Switches and hot swaps</h3>
+            <p>Switches can be linear (quiet and smooth), tactile (with tactile feedback) or clicky (with an audible
+                click). I chose Kailh Box White clicky switches. Hot swaps make it easy to change switches without
+                desoldering them. The keycaps must be compatible with the switches.</p>
+            <h3>Additional features</h3>
+            <ul>
+                <li>A rotary encoder to control the volume. Pins A and B of a rotary encoder are the quadrature signal
+                    outputs, used to detect rotation and the direction of movement (time-shifted square waves). This
+                    shift determines the direction of rotation. If A changes before B, the signal rotates in one
+                    direction. If B changes before A, the signal rotates in the opposite direction.</li>
+                <li>An I2C OLED display to show text or small images.</li>
+                <li>Four RGB LEDs placed underneath the PCB.</li>
+            </ul>
+            <img src="images/rotary_encoder_schematic.png" alt="Rotary encoder">
+            <h3>Microcontroller</h3>
+            <p>The Arduino Pro Micro, based on the ATmega32U4 (5 V / 16 MHz), is small, is recognized directly as an HID
+                device and can power the macropad. I decided against using female pins, which would have prevented
+                soldering the microcontroller directly to the circuit board, as this would have taken up more space.
+                Finally, to flash the microcontroller, we need to short-circuit the GND and RST pins, and to make this
+                easier, I added a small SMD button.</p>
+            <a class="guide-back" href="../macropad_v2.html">← Back to Macropad V2</a>
+        </section>
+    </main>
+    <script src="../../link-effects.js"></script>
+    <script src="../../sparkle.js"></script>
+</body>
+
+</html>
