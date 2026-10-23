@@ -184,6 +184,27 @@ h2 {
   text-underline-offset: 4px;
 }
 
+.guide-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
+  font-family: sans-serif;
+}
+
+.guide-navigation a {
+  text-underline-offset: 4px;
+}
+
+.guide-navigation .guide-back {
+  margin-top: 0;
+}
+
+.guide-navigation a:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
 .component-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
