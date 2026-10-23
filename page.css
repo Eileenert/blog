@@ -52,6 +52,7 @@ body.blabla-page .post-card .post-link {
 .link-character {
   display: inline-block;
   position: relative;
+  white-space: pre;
   transform-origin: center;
   transition: transform 280ms ease;
 }
@@ -212,6 +213,50 @@ main {
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   object-fit: contain;
+}
+
+.links-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 0;
+}
+
+.links-list figure {
+  display: flex;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  background: rgba(94, 91, 91, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.links-list figure:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+}
+
+.links-list img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+.links-list figcaption {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .nixie-gallery {
@@ -1065,6 +1110,10 @@ body.modal-open {
 }
 
 @media (max-width: 700px) {
+  .links-list {
+    grid-template-columns: 1fr;
+  }
+
   .art-content {
     padding-top: 34px;
   }

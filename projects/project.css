@@ -18,6 +18,7 @@ a {
 .link-character {
   display: inline-block;
   position: relative;
+  white-space: pre;
   transform-origin: center;
   transition: transform 280ms ease;
 }
